@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --color-white:           #FFFFFF;
+    --color-gray-0:          #F5F5F5;
+    --color-gray-1:          #E6E6E6;
+    --color-gray-1-5:        #BBBBBB;
+    --color-gray-2:          #BEBEBE;
+    --color-gray-3:          #616365;
+    --color-light-dark:      #222529; 
+    --color-dark:            #23262A;
+    --color-dark-shadow:     rgba(0, 0, 0, 0.06);
+    --color-red:             #FF7373;
+    --color-red-hover:       #ff0000;
+
+    --font-poppins:         'poppins', 'sans-serif';
+    
+    --font-weight-regular:   400;
+    --font-weight-medium:    500;
+    --font-weight-semibold:  600;
+    --font-weight-bold:      700;
+    --font-weight-extrabold: 800;
+    
+    --font-size-13:          13px;
+    --font-size-14:          14px;
+    --font-size-16:          16px;
+    --font-size-18:          18px;
+    --font-size-20:          20px;
+    --font-size-45:          45px;
+    --font-size-65:          65px;
+
+    --max-width:             1680px;
+}
+
+button {
+    position: relative;
+    background-color: var(--color-white);
+    color: var(--color-light-dark);
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semibold);
+    padding: 1.2rem 3.5rem 1.2rem 3.5rem;
+    border: none;
+    border-radius: 0;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--color-red-hover)
+}
+
+.corner-top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    border-left: 2px solid var(--color-white);
+    border-top: 2px solid var(--color-white);
+}
+
+.corner-bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    border-right: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white); 
+}
