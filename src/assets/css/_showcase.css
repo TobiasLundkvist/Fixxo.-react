@@ -1,7 +1,5 @@
 .showcase {
     padding-top: 100px;
-    background: rgb(230,230,230);
-    background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(245,245,245,1) 100%);
 }
     .showcase .container-fluid {
         display: flex;
@@ -13,12 +11,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-right: 5rem;
+            font-family: var(--font-poppins);
+            font-size: var(--font-size-16);
+            font-weight: var(--font-weight-regular);
         }
+            .showcase .container-fluid .showcase-text p {
+                padding: 15px 0;
+            }
 
-        .showcase .container-fluid .showcase-text h1 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+            .showcase .container-fluid .showcase-text h1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }

@@ -4,13 +4,13 @@ import RightImage from '../assets/images/top-menu-boy.svg'
 
 function Showcase() {
   return (
-    <section className='showcase'>
+    <section className='showcase gradient-gray'>
         <div className='container-fluid'>
             <img src={LeftImage} alt="" />
             <div className= 'showcase-text'>
                 <h1><span>SALE UP</span>To 50% Off</h1>
                 <p>Online shopping free home delivery over $100</p>             
-                <button>
+                <button className='btn-red'>
                 <div className='corner-top-left'></div>   
                 <div className='corner-bottom-right'></div>SHOP NOW
                 </button>

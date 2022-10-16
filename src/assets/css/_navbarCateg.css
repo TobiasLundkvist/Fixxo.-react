@@ -1,0 +1,15 @@
+.navbarCateg a {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-16);
+    transition: 0.3s ease-in-out;
+}
+    .navbarCateg a:hover {
+        font-size: var(--font-size-18);
+        text-decoration: underline;
+        color: var(--color-gray-3);
+
+    }
+

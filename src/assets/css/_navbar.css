@@ -1,3 +1,6 @@
+@import './_navbarCateg.css';
+@import './_navbarShop.css';
+
 .__navbar {
     height: 80px;
     position: fixed;
@@ -6,9 +9,9 @@
     align-items: center;
 }
 
-.__navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1680px;
-}
+    .__navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1680px;
+    }

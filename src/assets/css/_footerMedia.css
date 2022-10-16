@@ -1,0 +1,14 @@
+.socialmedia-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .socialmedia-body .socialmedia {
+        margin-top: 24px;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .socialmedia-body .socialmedia a {
+        padding: 0 10px;
+    }
+     

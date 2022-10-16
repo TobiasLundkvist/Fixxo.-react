@@ -32,20 +32,67 @@
     --max-width:             1680px;
 }
 
-button {
+html, body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-light-dark-dark);
+}
+
+.gradient-gray {
+    background: var(--color-gray-1);
+    background: linear-gradient(90deg, var(--color-gray-1) 0%, var(--color-gray-0) 100%);
+}
+
+.btn-red {
+    position: relative;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semibold);
+    padding: 24px 65px;
+    border: none;
+    border-radius: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-red:hover {
+    background-color: var(--color-red-hover)
+}
+
+.btn-black {
+    position: relative;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semibold);
+    padding: 24px 65px;
+    border: none;
+    border-radius: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-black:hover {
+    background-color: var(--color-red-hover)
+}
+
+.btn-white {
     position: relative;
     background-color: var(--color-white);
     color: var(--color-light-dark);
     font-family: var(--font-poppins);
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-semibold);
-    padding: 1.2rem 3.5rem 1.2rem 3.5rem;
+    padding: 24px 65px;
     border: none;
     border-radius: 0;
     transition: 0.3s ease-in-out;
 }
 
-button:hover {
+.btn-white:hover {
     background-color: var(--color-red-hover)
 }
 
@@ -67,4 +114,34 @@ button:hover {
     width: 20px;
     border-right: 2px solid var(--color-white);
     border-bottom: 2px solid var(--color-white); 
+}
+
+h1 {
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-65);
+    font-weight: var(--font-weight-extrabold);
+}
+
+h2 {
+    position: relative;
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-45);
+    font-weight: var(--font-weight-bold);
+}
+
+
+.active {
+    color: var(--color-red);
+    text-decoration: none;
+}
+    .active:hover {
+        color: var(--color-red-hover);
+        text-decoration: underline;
+    }
+
+a {
+    color: var(--color-light-dark);
+}
+i {
+    color: var(--color-light-dark);
 }
