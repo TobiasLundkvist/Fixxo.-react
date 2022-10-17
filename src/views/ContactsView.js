@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from '../section/NavbarSection'
 
 function ContactsView() {
   return (
-    <div>Contacts</div>
+    <>
+      <Navbar />
+    </>
   )
 }
 

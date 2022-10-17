@@ -1,6 +1,14 @@
-@import './assets/css/_navbar.css';
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+/* Cores */
+@import './assets/css/cores/_variables.css';
+@import './assets/css/cores/_base.css';
+
+/* Section */
+@import './assets/css/section/_navbarSection.css';
+
+
 @import './assets/css/_showcase.css';
-@import './assets/css/_utilities.css';
 @import './assets/css/_collabs.css';
 @import './assets/css/_footer.css';
 @import './assets/css/_shopTerms.css';

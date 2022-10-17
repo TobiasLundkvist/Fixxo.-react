@@ -1,25 +1,16 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-function NavbarShop() {
+
+function NavbarShop({link, icon}) {
   return (
     <div className='navbarShop'>
         <div className='whiteCircle'>
-            <a href='#'><i className="fa-light fa-magnifying-glass"></i></a> 
-        </div>
-        <div className='whiteCircle'>
-            <a href='#'><i className="fa-light fa-code-compare"></i></a>
-        </div>        
-        <div className='whiteCircle'>
-            <a id="quantity" href="#">
-            <span class="badge rounded-pill">1</span>
-            <i className="fa-light fa-heart"></i></a>
-        </div>
-        <div className='whiteCircle'>
-            <a id="quantity" href="#">
-            <span class="badge rounded-pill">3</span>
-            <i className="fa-light fa-bag-shopping"></i></a>
-        </div>
-
+            <NavLink to={link} id="quantity">
+                <i className={icon}></i>
+                <span class="badge rounded-pill">1</span>
+            </NavLink>
+        </div> 
     </div>
   )
 }

@@ -1,5 +1,5 @@
-@import './_navbarCateg.css';
-@import './_navbarShop.css';
+@import '../components/_navbarCateg.css';
+@import '../components/_navbarShop.css';
 
 .__navbar {
     height: 80px;
