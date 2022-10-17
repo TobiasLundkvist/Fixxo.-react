@@ -4,13 +4,13 @@ import CustomerService from '../assets/images/customer-service.svg'
 function CustomerTerms() {
   return (
     <div className='terms'>
-        <div className='circle'>
-            <div>
-                <img src={CustomerService} alt="Customer Service" />
-            </div>
+      <div className='circle'>
+        <div>
+          <img src={CustomerService} alt="Customer Service" />
         </div>
-        <h4>Customer Support</h4>
-        <p>Village did removed enjoyed explain talking.</p>
+      </div>
+      <h4>Customer Support</h4>
+      <p>Village did removed enjoyed explain talking.</p>
     </div>
   )
 }

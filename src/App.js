@@ -1,20 +1,14 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import Showcase from './components/Showcase';
-import Collabs from './components/Collabs';
-import Footer from './components/Footer';
-import ShopTerms from './components/ShopTerms';
+import ContactsView from './views/ContactsView';
+import HomeView from './views/HomeView';
 
 
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Showcase />
-      <Collabs />
-      <ShopTerms />
-      <Footer />
+      <HomeView />
+      <ContactsView />
     </>
   );
 }
