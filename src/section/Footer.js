@@ -1,5 +1,5 @@
 import React from 'react'
-import FooterMedia from './FooterMedia'
+import FooterMedia from '../components/FooterMedia'
 
 function Footer() {
   return (

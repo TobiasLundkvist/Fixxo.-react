@@ -8,7 +8,12 @@
         margin-bottom: 15px;
         font-size: 20px;
     }
-    .socialmedia-body .socialmedia a {
-        padding: 0 10px;
-    }
+        .socialmedia-body .socialmedia a {
+            padding: 0 10px;
+        }
+            .socialmedia-body .socialmedia a i:hover {
+                color: var(--color-red-hover);
+            }
+
+
      

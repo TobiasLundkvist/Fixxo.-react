@@ -20,11 +20,13 @@
         transition: 0.3s ease-in-out;
     }
         .navbarShop .whiteCircle:hover {
-            height: 40px;
-            width: 40px;
             background-color: var(--color-gray-1);
         }
-            .navbarShop .whiteCircle #quantity .badge {
+
+        .navbarShop .whiteCircle .active {
+            background-color: var(--color-gray-1);
+        }
+            .navbarShop .whiteCircle .quantity .badge {
                 background-color: var(--color-red);
                 position: absolute;
                 top: -10px;
@@ -32,7 +34,7 @@
                 font-weight: var(--font-weight-medium);
                 transition: 0.3s ease-in-out;
             }
-                .navbarShop .whiteCircle:hover #quantity .badge {
+                .navbarShop .whiteCircle:hover .quantity .badge {
                     background-color: var(--color-red-hover)
                 }
 

@@ -104,16 +104,6 @@ h4 {
 }
 
 
-.active {
-    color: var(--color-red);
-    text-decoration: none;
-}
-    .active:hover {
-        color: var(--color-red-hover);
-        text-decoration: underline;
-    }
-
-
 i {
     color: var(--color-light-dark);
 }

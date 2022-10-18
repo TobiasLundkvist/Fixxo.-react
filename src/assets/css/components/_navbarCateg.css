@@ -1,4 +1,4 @@
-.navbarCateg .navbarlink {
+.navbarlink {
     padding-left: 15px;
     padding-right: 15px;
     text-decoration: none;
@@ -7,10 +7,15 @@
     transition: 0.3s ease-in-out;
     color: var(--color-light-dark);
 }
-    .navbarCateg .navbarlink:hover {
+    .navbarlink:hover {
         font-size: var(--font-size-18);
         text-decoration: underline;
         color: var(--color-gray-3);
-
     }
+
+
+.active {
+    color: var(--color-red-hover);
+    text-decoration: underline;
+}
 

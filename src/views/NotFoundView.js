@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from '../section/NavbarSection';
 
 function NotFoundView() {
   return (
-    <div>404 - Page Not Found</div>
+    <>
+      <Navbar />
+      <h1 className='d-flex justify-content-center'>404 - Page Not Found</h1>
+    </>
+
   )
 }
 

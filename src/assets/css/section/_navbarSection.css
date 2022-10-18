@@ -1,17 +1,23 @@
 @import '../components/_navbarCateg.css';
 @import '../components/_navbarShop.css';
 
-.__navbar {
-    height: 80px;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-    .__navbar .container {
+@media (min-width: 1600px) {
+    .__navbar {
+        height: 80px;
+        position: fixed;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        max-width: 1680px;
     }
+    
+        .__navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1680px;
+        }
+    .active {
+        color: var(--color-red-hover);
+        text-decoration: underline;
+    }  
+}

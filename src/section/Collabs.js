@@ -1,6 +1,6 @@
 import React from 'react'
-import CollabLetsBe from './CollabLetsBe'
-import CollabPamela from './CollabPamela'
+import CollabLetsBe from '../components/CollabLetsBe'
+import CollabPamela from '../components/CollabPamela'
 
 function Collabs() {
   return (

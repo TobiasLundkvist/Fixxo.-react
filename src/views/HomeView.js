@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../section/NavbarSection';
 import Showcase from '../components/Showcase';
-import Collabs from '../components/Collabs';
-import Footer from '../components/Footer';
+import Collabs from '../section/Collabs';
+import Footer from '../section/Footer';
 import ShopTerms from '../components/ShopTerms';
 
 

@@ -1,4 +1,4 @@
-@import './_footerMedia.css';
+@import '../components/_footerMedia.css';
 
 footer {
     height: 110px;
