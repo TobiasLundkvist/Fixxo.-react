@@ -2,16 +2,14 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 
-function NavbarShop({link, icon, badge}) {
+function NavbarShop({link, icon, badge, hideOnMobile}) {
   return (
-    <div className='navbarShop'>
-      <div className='whiteCircle'>
-          <NavLink to={link} className="quantity" end>
-            <i className={icon}></i>
-            <span className="badge rounded-pill">{badge}</span>
-          </NavLink>
-      </div> 
-    </div>
+    <div className='whiteCircle'>
+        <NavLink className={ `navbarShop ${hideOnMobile ? "d-none d-md-flex" : ""}`} to={link} id="quantity" end>
+          <i className={icon}></i>
+          <span className="badge rounded-pill">{badge}</span>
+        </NavLink>
+    </div> 
   )
 }
 

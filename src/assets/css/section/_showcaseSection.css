@@ -1,5 +1,5 @@
 .showcase {
-    padding-top: 100px;
+    padding-top: 20px;
 }
     .showcase .container {
         display: flex;
@@ -9,9 +9,11 @@
 
     }
         .showcase .container .right-img {
+            display: inline;
             margin-right: -120px;
         }
         .showcase .container .left-img {
+            display: inline;
             margin-left: -120px;
         }
 
@@ -25,13 +27,19 @@
             font-weight: var(--font-weight-regular);
 
         }
-            .showcase .container .showcase-text p {
-                padding: 15px 0;
-            }
-
             .showcase .container .showcase-text h1 {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                font-family: var(--font-poppins);
+                font-size: var(--font-size-65);
+                font-weight: var(--font-weight-extrabold);
             }
+            .showcase .container .showcase-text p {
+                padding: 15px 0;
+                display: inline;
+            }
+    
+
+

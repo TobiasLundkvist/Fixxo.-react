@@ -10,7 +10,9 @@ import TwoforSection from '../section/TwoforSection';
 function HomeView() {
   return (
     <>
+      <div className='gradient-gray'>
       <Navbar />
+      </div>
       <Showcase />
       <Collabs />
       <TwoforSection />

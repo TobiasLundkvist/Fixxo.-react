@@ -1,19 +1,55 @@
 @import '../components/_navbarCateg.css';
 @import '../components/_navbarShop.css';
 
-@media (min-width: 1600px) {
-    .__navbar {
-        position: fixed;
+
+.navbar .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1680px;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+
+}
+
+    .navbar .container .logo {
+        margin: 10px
+    }
+    .navbar .container .menulinks {
         display: flex;
-        align-items: center;
-        height: 100px;
-        width: 100%;
+        flex-direction: column;
+        margin: 10px
     }
     
-        .__navbar .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            max-width: 1680px;
+    .navbar .container .navbarShop {
+        display: flex;
+        justify-content: center;
+        margin: 10px
+    }
+
+@media (min-width: 1600px) {
+    .navbar .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:"logo menulinks navbarshop";
+        max-width: 1680px;
+        padding-top: 20px;
+        width: 100%;
+    }
+
+        .navbar .container .logo {
+            grid-area: logo;
+            text-align: start;
+        }
+        .navbar .container .menulinks {
+            grid-area: menulinks;
+        }
+        
+        .navbar .container .navbarShop {
+            grid-area: navbarshop;
+            display: flex;
+            justify-content: flex-end;
+            
         }
         
     .active {
@@ -21,3 +57,4 @@
         text-decoration: underline;
     }  
 }
+
