@@ -83,6 +83,12 @@ html, body {
     border-bottom: 2px solid var(--color-white); 
 }
 
+.container {
+    max-width: 1680px;
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
 h1 {
     font-family: var(--font-poppins);
     font-size: var(--font-size-65);

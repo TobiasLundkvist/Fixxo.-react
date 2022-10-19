@@ -1,8 +1,8 @@
 import React from 'react'
-import CustomerTerms from './CustomerTerms'
-import DeliveryTerms from './DeliveryTerms'
-import ReutersTerms from './ReutersTerms'
-import SecuredTerms from './SecuredTerms'
+import CustomerTerms from '../components/CustomerTerms'
+import DeliveryTerms from '../components/DeliveryTerms'
+import ReutersTerms from '../components/ReutersTerms'
+import SecuredTerms from '../components/SecuredTerms'
 
 function ShopTerms() {
   return (

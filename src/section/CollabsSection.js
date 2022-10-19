@@ -4,7 +4,7 @@ import CollabPamela from '../components/CollabPamela'
 
 function Collabs() {
   return (
-    <section className='container'>
+    <section className='collabs container'>
       <CollabPamela />
       <CollabLetsBe />
     </section>

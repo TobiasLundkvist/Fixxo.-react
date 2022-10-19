@@ -3,8 +3,8 @@ import PamelaImage from '../assets/images/pamela-reif-image.svg'
 
 function CollabPamela() {
   return (
-    <div className='pamela border'>
-        <img src={PamelaImage} alt="Pamela Reif" className='pamela-img border'/>
+    <div className='pamela'>
+        <img src={PamelaImage} alt="Pamela Reif" className='pamela-img'/>
         <div>
             <h2><span>Pamela Reif's</span>Top Picks</h2>
             <button className='btn-black'>

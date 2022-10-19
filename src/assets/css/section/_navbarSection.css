@@ -3,19 +3,19 @@
 
 @media (min-width: 1600px) {
     .__navbar {
-        height: 80px;
         position: fixed;
-        width: 100%;
         display: flex;
         align-items: center;
+        height: 100px;
+        width: 100%;
     }
     
         .__navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             max-width: 1680px;
         }
+        
     .active {
         color: var(--color-red-hover);
         text-decoration: underline;

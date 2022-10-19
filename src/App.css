@@ -6,9 +6,11 @@
 
 /* Section */
 @import './assets/css/section/_navbarSection.css';
-
-
-@import './assets/css/_showcase.css';
-@import './assets/css/_collabs.css';
+@import './assets/css/section/_showcaseSection.css';
+@import './assets/css/section/_collabsSection.css';
 @import './assets/css/section/_footerSection.css';
-@import './assets/css/_shopTerms.css';
+@import './assets/css/section/_shopTermsSection.css';
+@import './assets//css/section/_breadcrumbSection.css';
+@import './assets/css/section/_mapSection.css';
+@import './assets/css/section/_contactForm.css';
+@import './assets/css/section/_twoforSection.css';

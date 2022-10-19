@@ -1,7 +1,7 @@
-@import './_collabPamela.css';
-@import './_collabLetsBe.css';
+@import '../components/_collabPamela.css';
+@import '../components/_collabLetsBe.css';
 
-.container {
+.collabs {
     display: flex;
     justify-content: center;
     align-items: center;

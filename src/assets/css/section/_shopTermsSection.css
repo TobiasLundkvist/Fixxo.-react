@@ -1,4 +1,4 @@
-@import './_terms.css';
+@import '../components/_terms.css';
 
 .shop-terms {
     display: flex;

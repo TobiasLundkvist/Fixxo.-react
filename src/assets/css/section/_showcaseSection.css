@@ -1,12 +1,21 @@
 .showcase {
     padding-top: 100px;
 }
-    .showcase .container-fluid {
+    .showcase .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1680px;
+
     }
-        .showcase .container-fluid .showcase-text {
+        .showcase .container .right-img {
+            margin-right: -120px;
+        }
+        .showcase .container .left-img {
+            margin-left: -120px;
+        }
+
+        .showcase .container .showcase-text {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -14,12 +23,13 @@
             font-family: var(--font-poppins);
             font-size: var(--font-size-16);
             font-weight: var(--font-weight-regular);
+
         }
-            .showcase .container-fluid .showcase-text p {
+            .showcase .container .showcase-text p {
                 padding: 15px 0;
             }
 
-            .showcase .container-fluid .showcase-text h1 {
+            .showcase .container .showcase-text h1 {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
