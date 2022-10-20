@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-function ProductCard() {
+function ProductCard({item}) {
   return (
     <div className="the-product">
         <div className="product-card">
@@ -19,8 +19,8 @@ function ProductCard() {
             </div>
         </div>
         <div className="card-body">
-            <div className='body-rubrik'>Category</div>
-            <p className='body-text'>Modern Black Blouse</p>
+            <div className='body-rubrik'>{item.category}</div>
+            <p className='body-text'>{item.name}</p>
             <div className='body-rating'>
                 <i className="rating fa-solid fa-star"></i>
                 <i className="rating fa-solid fa-star"></i>
@@ -28,7 +28,7 @@ function ProductCard() {
                 <i className="rating fa-solid fa-star"></i>
                 <i className="rating fa-solid fa-star"></i>
             </div>
-            <p className="price"><span></span> $35.00</p>
+            <p className="price"><span></span>{item.price}</p>
         </div>
     </div>
   )

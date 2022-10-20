@@ -15,7 +15,7 @@ function HomeView() {
       <Navbar />
       </div>
       <Showcase />
-      <ProductGridSection />
+      <ProductGridSection title="Featured Products"/>
       <Collabs />
       <TwoforSection />
       <ShopTerms />
