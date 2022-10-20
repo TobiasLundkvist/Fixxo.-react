@@ -2,16 +2,28 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 function ProductCard({item}) {
+    
+    const addToWishList = (e) => {
+        console.log("added to wish list")
+    }
+    const addToCompare = (e) => {
+        console.log("added to compare")
+    }
+    const addToCart = (e) => {
+        console.log("added to shoppingcart")
+    }
+
+
   return (
     <div className="the-product">
         <div className="product-card">
             <div className="card-img">
                 <div className="card-menu">
-                    <button className='card-icon'><i className="fa-light fa-heart"></i></button> 
-                    <button className='card-icon'><i className="fa-light fa-code-compare"></i></button> 
-                    <button className='card-icon'><i className="fa-light fa-bag-shopping"></i></button> 
+                    <button onClick={addToWishList} className='card-icon'><i className="fa-light fa-heart"></i></button> 
+                    <button onClick={addToCompare} className='card-icon'><i className="fa-light fa-code-compare"></i></button> 
+                    <button onClick={addToCart} className='card-icon'><i className="fa-light fa-bag-shopping"></i></button> 
                 </div>
-                <NavLink to="/product" className='btn-red'>
+                <NavLink to={`/product/${item.id}`} className='btn-red'>
                     <div className="corner-top-left"></div>
                     <div className="corner-bottom-right"></div>
                     QUICK VIEW

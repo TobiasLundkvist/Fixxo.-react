@@ -5,6 +5,7 @@ import ContactsView from './views/ContactsView';
 import CategoriesView from './views/CategoriesView';
 import CompareView from './views/CompareView';
 import ProductView from './views/ProductView';
+import ProductDetailsView from './views/ProductDetailsView';
 import SearchView from './views/SearchView';
 import ShoppingCartView from './views/ShoppingCartView';
 import WishListView from './views/WishListView';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/categories' element= {<CategoriesView />} />
         <Route path='/compare' element= {<CompareView />} />
         <Route path='/product' element= {<ProductView />} />
+        <Route path='/product/:id' element= {<ProductDetailsView />} />
         <Route path='/search' element= {<SearchView />} />
         <Route path='/shoppingcart' element= {<ShoppingCartView />} />
         <Route path='/wishlist' element= {<WishListView />} />
