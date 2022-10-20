@@ -25,7 +25,7 @@ function Navbar() {
         <div className='navbarShop'>
           <NavbarShop link='/search' icon="fa-light fa-magnifying-glass"/>
           <NavbarShop link='/compare' icon="fa-light fa-code-compare"/>
-          <NavbarShop hideOnMobile={true} link='/wishlist' icon="fa-light fa-heart" badge="3"/>
+          <NavbarShop link='/wishlist' icon="fa-light fa-heart" badge="3"/>
           <NavbarShop link='/shoppingcart' icon="fa-light fa-bag-shopping" badge="2"/>
 
           <button onClick={toggleMenu} className='d-lg-none whiteCircle btn-menu-icon'><i className='fa-light fa-bars'></i></button>

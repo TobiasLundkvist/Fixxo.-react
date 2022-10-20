@@ -5,6 +5,7 @@ import Collabs from '../section/CollabsSection';
 import Footer from '../section/FooterSection';
 import ShopTerms from '../section/ShopTermsSection';
 import TwoforSection from '../section/TwoforSection';
+import ProductGridSection from '../section/ProductGridSection';
 
 
 function HomeView() {
@@ -14,6 +15,7 @@ function HomeView() {
       <Navbar />
       </div>
       <Showcase />
+      <ProductGridSection />
       <Collabs />
       <TwoforSection />
       <ShopTerms />
