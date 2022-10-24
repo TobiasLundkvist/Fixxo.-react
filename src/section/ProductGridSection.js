@@ -6,14 +6,14 @@ function ProductGridSection({title, products}) {
     <section>
       <div className="product-grid">
         <h1>{title}</h1>
-          <div className="grid container">
-            {
-              products.map(products => <ProductCard key={products.id} item={products} />)
-            }
-          </div>
+        <div className="grid container">
+          {
+            products.map(products => <ProductCard key={products.id} item={products} />)
+          }
+        </div>
       </div>
     </section>
-
+  
   )
 }
 

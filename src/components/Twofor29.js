@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductCard from './ProductCard'
 
 function Twofor29() {
   return (
@@ -12,6 +13,12 @@ function Twofor29() {
                     <div className="corner-bottom-right"></div>
                 FLASH SALE</button>
             </div> 
+            <div className="card-grid">
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+            </div>
         </div>
     )
 }

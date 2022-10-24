@@ -3,7 +3,7 @@ import Twofor29 from '../components/Twofor29'
 import Twofor49 from '../components/Twofor49'
 
 
-function TwoforSection() {
+function TwoforSection(products) {
   return (
     <> 
       <Twofor29 />

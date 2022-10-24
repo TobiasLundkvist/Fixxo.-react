@@ -23,7 +23,7 @@ function ProductCard({item}) {
                     <button onClick={addToCompare} className='card-icon'><i className="fa-light fa-code-compare"></i></button> 
                     <button onClick={addToCart} className='card-icon'><i className="fa-light fa-bag-shopping"></i></button> 
                 </div>
-                <NavLink to={`/product/${item.id}`} className='btn-red'>
+                <NavLink to={`/product/${item?.id}`} className='btn-red'>
                     <div className="corner-top-left"></div>
                     <div className="corner-bottom-right"></div>
                     QUICK VIEW
@@ -31,8 +31,8 @@ function ProductCard({item}) {
             </div>
         </div>
         <div className="card-body">
-            <div className='body-rubrik'>{item.category}</div>
-            <p className='body-text'>{item.name}</p>
+            <div className='body-rubrik'>{item?.category}</div>
+            <p className='body-text'>{item?.name}</p>
             <div className='body-rating'>
                 <i className="rating fa-solid fa-star"></i>
                 <i className="rating fa-solid fa-star"></i>
@@ -40,7 +40,7 @@ function ProductCard({item}) {
                 <i className="rating fa-solid fa-star"></i>
                 <i className="rating fa-solid fa-star"></i>
             </div>
-            <p className="price"><span></span>{item.price}</p>
+            <p className="price"><span></span>{item?.price}</p>
         </div>
     </div>
   )
