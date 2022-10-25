@@ -8,9 +8,12 @@ function ContactForm() {
     const validate = (values) => {
         const errors ={}
         const regex_email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        const regex_name = /^[A-Z][a-zA-Z]+$/
 
         if(!values.name)
             errors.name = "You must enter a name"
+        else if(!regex_name.test(values.name))
+            errors.name ="You must enter a real name"
 
         if(!values.email)
             errors.email = "You must enter an email address"
@@ -46,7 +49,7 @@ function ContactForm() {
             <section className="contact">
                 <div className="container">
                     {
-                        submitted ? (<div>Thank you for your comment!</div>)
+                        submitted ? (<div className='thankYouMessage'>Thank you for your comment! <br></br>We will contact you in within 5 working days.</div>)
                         :
                         <>
                             <h3>Come in Contact with Us</h3>
