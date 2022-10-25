@@ -18,7 +18,7 @@
                 font-weight: var(--font-weight-medium);
                 color: var(--color-dark);
                 margin-left: 5px;
-                transition: 0.3s ease-in-out;
+                transition: 0.1s ease-in-out;
             }
 
                 .breadcrumb .breadcrumb-list li:hover {

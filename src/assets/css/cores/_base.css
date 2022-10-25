@@ -106,3 +106,8 @@ h4 {
 i {
     color: var(--color-light-dark);
 }
+
+.active {
+    color: var(--color-red-hover);
+    text-decoration: underline;
+}

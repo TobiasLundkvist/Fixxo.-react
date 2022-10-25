@@ -1,13 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-function BreadcrumbSection({link}) {
+function BreadcrumbSection({link, currentPage}) {
   return (
     <section className="breadcrumb">
       <div className='container'>
         <ul className="breadcrumb-list">
             <NavLink to={link} end><li><i className="fa-duotone fa-house"></i></li></NavLink>
-            <li>| Contacts</li>
+            <NavLink to='/contacts'><li>{currentPage}</li></NavLink>
         </ul>
       </div>
     </section>

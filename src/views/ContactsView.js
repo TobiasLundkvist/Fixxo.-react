@@ -6,10 +6,13 @@ import Navbar from '../section/NavbarSection'
 import Footer from '../section/FooterSection';
 
 function ContactsView() {
+
+  window.top.document.title = 'Fixxo. | Contacts'
+
   return (
     <>
       <Navbar />
-      <BreadcrumbSection link="/" end/>
+      <BreadcrumbSection link="/" currentPage="| Contacts" />
       <MapSection />
       <ContactForm />
       <Footer />
