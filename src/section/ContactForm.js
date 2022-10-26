@@ -1,19 +1,48 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function ContactForm() {
-    const [contactForm, setContactForm] = useState({name: '', email: '', comment: ''})
+    const [contactForm, setContactForm] = useState({
+        name: '', 
+        email: '', 
+        comment: ''
+    })
+
+    const inputs = [
+        {
+            id: "name",
+            name:"name",
+            type:"text",
+            placeholder:"Your Name",
+        },
+        {
+            id:"email",
+            name:"email",
+            type:"email",
+            placeholder:"Your Mail"
+        },
+        {
+            id:"comment",
+            name:"comment",
+            type:"textarea",
+            placeholder:"Comments"
+        }
+
+    ]
+    
     const [formErrors, setFormErrors] = useState({})
     const [submitted, setSubmitted] = useState(false)
 
     const validate = (values) => {
         const errors ={}
         const regex_email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        const regex_name = /^[A-Z][a-zA-Z]+$/
+        const regex_name = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
 
         if(!values.name)
             errors.name = "You must enter a name"
         else if(!regex_name.test(values.name))
-            errors.name ="You must enter a real name"
+            errors.name ="Your name can not include numbers"
+        else if(values.name.length < 2)
+            errors.name = "Your name must be longer then two characters"
 
         if(!values.email)
             errors.email = "You must enter an email address"
@@ -44,6 +73,26 @@ function ContactForm() {
     }
 
 
+    // useEffect(() => {
+    //     document.addEventListener('keydown', detectKeyDown, true)
+    // }, [])
+
+    // const detectKeyDown = (e) => {
+    //     console.log("klickad", e.key)
+    // }
+
+
+    // const [values, setValues] = useState({
+    //     name: "",
+    //     email: "",
+    // });
+
+    // const onChange = (e) => {
+    //     setValues ({ ...values, [e.target.name]: e.target.value })
+    // }
+
+
+
     return (    
         <>
             <section className="contact">
@@ -53,17 +102,17 @@ function ContactForm() {
                         :
                         <>
                             <h3>Come in Contact with Us</h3>
-                            <form className="contact-form" onSubmit={handleSubmit} /*onSubmit="submitForm(event)"*/ noValidate>
+                            <form className="contact-form" onSubmit={handleSubmit} noValidate>
                                 <div>
-                                    <input id="name" type="text" className='error' onkeyup="validate(event)" placeholder="Your Name" value={contactForm.name} onChange={handleChange} />
+                                    <input id="name" type="text" className='error' placeholder="Your Name" value={contactForm.name} onChange={handleChange} required/>
                                     <div className="errorMessage">{formErrors.name}</div>
                                 </div>
                                 <div>
-                                    <input id="email" type="email" className='error' onkeyup="validate(event)" placeholder="Your Mail" value={contactForm.email} onChange={handleChange} />
+                                    <input id="email" type="email" className='error' placeholder="Your Mail" value={contactForm.email} onChange={handleChange} required/>
                                     <div className="errorMessage">{formErrors.email}</div>
                                 </div>
                                 <div className="textarea">
-                                    <textarea id="comment" className='error' onkeyup="validate(event)" placeholder="Comments" value={contactForm.comment} onChange={handleChange}></textarea>
+                                    <textarea id="comment" className='error' placeholder="Comments" value={contactForm.comment} onChange={handleChange}></textarea>
                                     <div className="errorMessage">{formErrors.comment}</div>
                                 </div>
                                 <div>
