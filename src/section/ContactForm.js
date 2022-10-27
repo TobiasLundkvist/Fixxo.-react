@@ -9,7 +9,7 @@ function ContactForm() {
 
     const inputs = [
         {
-            id: "name",
+            id:"name",
             name:"name",
             type:"text",
             placeholder:"Your Name",
@@ -40,7 +40,7 @@ function ContactForm() {
         if(!values.name)
             errors.name = "You must enter a name"
         else if(!regex_name.test(values.name))
-            errors.name ="Your name can not include numbers"
+            errors.name ="Your name can not include numbers or special characters"
         else if(values.name.length < 2)
             errors.name = "Your name must be longer then two characters"
 
@@ -71,25 +71,26 @@ function ContactForm() {
         e.preventDefault()
         setFormErrors(validate(contactForm))
     }
+    
+    const handleKeyUp = (e) => {
+        e.preventDefault();
+        const error = {}
+        const inputId = e.target.id
+        const inputValue = e.target.value
 
-
-    // useEffect(() => {
-    //     document.addEventListener('keydown', detectKeyDown, true)
-    // }, [])
-
-    // const detectKeyDown = (e) => {
-    //     console.log("klickad", e.key)
-    // }
-
-
-    // const [values, setValues] = useState({
-    //     name: "",
-    //     email: "",
-    // });
-
-    // const onChange = (e) => {
-    //     setValues ({ ...values, [e.target.name]: e.target.value })
-    // }
+        if (inputId === "name") {
+            const pattern = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
+            if (inputValue.match(pattern)) {
+                delete error.name;
+                e.target.classList.remove("error")
+                setFormErrors(error)
+            } else {
+                e.target.classList.add("error")
+                error.name = "Your name can not include numbers or special characters"
+                setFormErrors(error)
+            }
+        }
+    }
 
 
 
@@ -104,7 +105,8 @@ function ContactForm() {
                             <h3>Come in Contact with Us</h3>
                             <form className="contact-form" onSubmit={handleSubmit} noValidate>
                                 <div>
-                                    <input id="name" type="text" className='error' placeholder="Your Name" value={contactForm.name} onChange={handleChange} required/>
+                                    {/* {inputs.map((input) => <input key={input.id} {...input} value={contactForm[input.name]} onChange={handleChange}/>)} */}
+                                    <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} onKeyUp={handleKeyUp}  required/>
                                     <div className="errorMessage">{formErrors.name}</div>
                                 </div>
                                 <div>
