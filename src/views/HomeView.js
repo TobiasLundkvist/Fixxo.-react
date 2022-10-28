@@ -32,7 +32,7 @@ function HomeView() {
       <Showcase />
       <ProductGridSection title="Featured Products" products={featuredProducts} />
       <Collabs />
-      <TwoforSection />
+      <TwoforSection products={featuredProducts} />
       <ShopTerms />
       <Footer />
     </>

@@ -3,11 +3,11 @@ import Twofor29 from '../components/Twofor29'
 import Twofor49 from '../components/Twofor49'
 
 
-function TwoforSection(products) {
+function TwoforSection({products}) {
   return (
     <> 
-      <Twofor29 />
-      <Twofor49 />
+      <Twofor29 products={products} />
+      <Twofor49 products={products}/>
     </>
   )
 }

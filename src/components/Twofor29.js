@@ -1,7 +1,8 @@
 import React from 'react'
+import ProductGridSection from '../section/ProductGridSection'
 import ProductCard from './ProductCard'
 
-function Twofor29() {
+function Twofor29({products}) {
   return (
         <div className='twofor29 container'>
             <div className="twofor-body">
@@ -14,10 +15,10 @@ function Twofor29() {
                 FLASH SALE</button>
             </div> 
             <div className="card-grid">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                <ProductCard item={{name:'SnyggBlus', category: 'Mode', price: "$11.00"}} />
+                <ProductCard item={products[0]}/>
+                <ProductCard item={products[1]}/>
+                <ProductCard item={products[2]}/>
             </div>
         </div>
     )

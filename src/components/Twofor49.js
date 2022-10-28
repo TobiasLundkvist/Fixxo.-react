@@ -1,14 +1,14 @@
 import React from 'react'
 import ProductCard from './ProductCard'
 
-function Twofor49() {
+function Twofor49({products}) {
   return (
     <div className='twofor49 container'>
       <div className="card-grid">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard item={products[4]}/>
+        <ProductCard item={products[5]} />
+        <ProductCard item={products[6]}/>
+        <ProductCard item={products[7]}/>
       </div>
       <div className="twofor-body49">
         <div className="twofor-text">

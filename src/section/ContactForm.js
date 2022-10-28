@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { validate } from '../components/Validering'
 
 function ContactForm() {
     const [contactForm, setContactForm] = useState({
@@ -7,28 +8,6 @@ function ContactForm() {
         comment: ''
     })
 
-    const inputs = [
-        {
-            id:"name",
-            name:"name",
-            type:"text",
-            placeholder:"Your Name",
-        },
-        {
-            id:"email",
-            name:"email",
-            type:"email",
-            placeholder:"Your Mail"
-        },
-        {
-            id:"comment",
-            name:"comment",
-            type:"textarea",
-            placeholder:"Comments"
-        }
-
-    ]
-    
     const [formErrors, setFormErrors] = useState({})
     const [submitted, setSubmitted] = useState(false)
 
@@ -47,7 +26,7 @@ function ContactForm() {
         if(!values.email)
             errors.email = "You must enter an email address"
         else if(!regex_email.test(values.email))
-            errors.email = "You must enter an valid email address"
+            errors.email = "You must enter an valid email address, eg. tobias@domain.se"
 
         if(!values.comment)
             errors.comment = "You must enter a comment"
@@ -62,9 +41,12 @@ function ContactForm() {
         return errors;
     }
 
+    
+
     const handleChange = (e) => {
         const {id, value} = e.target
         setContactForm({...contactForm, [id]: value})
+        handleKeyUp(e) 
     }
 
     const handleSubmit = (e) => {
@@ -80,8 +62,8 @@ function ContactForm() {
 
         if (inputId === "name") {
             const pattern = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
+            
             if (inputValue.match(pattern)) {
-                delete error.name;
                 e.target.classList.remove("error")
                 setFormErrors(error)
             } else {
@@ -89,6 +71,29 @@ function ContactForm() {
                 error.name = "Your name can not include numbers or special characters"
                 setFormErrors(error)
             }
+        }
+        if (inputId === "email") {
+            const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            
+            if (inputValue.match(pattern)) {
+                e.target.classList.remove("error")
+                setFormErrors(error)
+            } else {
+                e.target.classList.add("error")
+                error.email = "You must enter an valid email address, eg. tobias@domain.se"
+                setFormErrors(error)
+            }
+        }
+        if (inputId === "comment") {
+            if(inputValue.length > 5) {
+                e.target.classList.remove("error")
+                setFormErrors(error)
+            } else {
+                e.target.classList.add("error")
+                error.comment = "Your comment must be longer then five characters"
+                setFormErrors(error)
+            }
+
         }
     }
 
@@ -105,16 +110,15 @@ function ContactForm() {
                             <h3>Come in Contact with Us</h3>
                             <form className="contact-form" onSubmit={handleSubmit} noValidate>
                                 <div>
-                                    {/* {inputs.map((input) => <input key={input.id} {...input} value={contactForm[input.name]} onChange={handleChange}/>)} */}
-                                    <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} onKeyUp={handleKeyUp}  required/>
+                                    <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange}  required/>
                                     <div className="errorMessage">{formErrors.name}</div>
                                 </div>
                                 <div>
-                                    <input id="email" type="email" className='error' placeholder="Your Mail" value={contactForm.email} onChange={handleChange} required/>
+                                    <input id="email" type="email" placeholder="Your Mail" value={contactForm.email} onChange={handleChange} required/>
                                     <div className="errorMessage">{formErrors.email}</div>
                                 </div>
                                 <div className="textarea">
-                                    <textarea id="comment" className='error' placeholder="Comments" value={contactForm.comment} onChange={handleChange}></textarea>
+                                    <textarea id="comment" placeholder="Comments" value={contactForm.comment} onChange={handleChange}></textarea>
                                     <div className="errorMessage">{formErrors.comment}</div>
                                 </div>
                                 <div>
