@@ -41,19 +41,6 @@ function ContactForm() {
         return errors;
     }
 
-    
-
-    const handleChange = (e) => {
-        const {id, value} = e.target
-        setContactForm({...contactForm, [id]: value})
-        handleKeyUp(e) 
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setFormErrors(validate(contactForm))
-    }
-    
     const handleKeyUp = (e) => {
         e.preventDefault();
         const error = {}
@@ -97,6 +84,19 @@ function ContactForm() {
         }
     }
 
+    const handleChange = (e) => {
+        const {id, value} = e.target
+        setContactForm({...contactForm, [id]: value})
+        handleKeyUp(e) 
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setFormErrors(validate(contactForm))
+    }
+    
+
+
 
 
     return (    
@@ -104,7 +104,7 @@ function ContactForm() {
             <section className="contact">
                 <div className="container">
                     {
-                        submitted ? (<div className='thankYouMessage'>Thank you for your comment! <br></br>We will contact you in within 5 working days.</div>)
+                        submitted ? (<div className='thankYouMessage'>Thank you for your comment! <br></br>We will contact you within 5 working days.</div>)
                         :
                         <>
                             <h3>Come in Contact with Us</h3>
