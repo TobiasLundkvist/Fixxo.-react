@@ -1,8 +1,12 @@
-import React from 'react'
-import ProductGridSection from '../section/ProductGridSection'
+import React, { useContext, useState } from 'react'
+import {ProductContext } from '../contexts/contexts'
 import ProductCard from './ProductCard'
 
-function Twofor29({products}) {
+function Twofor29({items=[]}) {
+
+    const products = useContext(ProductContext) 
+
+
   return (
         <div className='twofor29 container'>
             <div className="twofor-body">
@@ -15,10 +19,9 @@ function Twofor29({products}) {
                 FLASH SALE</button>
             </div> 
             <div className="card-grid">
-                <ProductCard item={{name:'SnyggBlus', category: 'Mode', price: "$11.00"}} />
-                <ProductCard item={products[0]}/>
-                <ProductCard item={products[1]}/>
-                <ProductCard item={products[2]}/>
+            {
+                items.map(product => <ProductCard key={product.articleNumber} item={product} />)
+            }
             </div>
         </div>
     )

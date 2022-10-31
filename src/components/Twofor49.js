@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ProductCard from './ProductCard'
+import {ProductContext } from '../contexts/contexts'
 
-function Twofor49({products}) {
+function Twofor49({items=[]}) {
+
+  const products = useContext(ProductContext) 
+
   return (
     <div className='twofor49 container'>
       <div className="card-grid">
-        <ProductCard item={products[4]}/>
-        <ProductCard item={products[5]} />
-        <ProductCard item={products[6]}/>
-        <ProductCard item={products[7]}/>
+      {
+        items.map(product => <ProductCard key={product.articleNumber} item={product} />)
+      }
       </div>
       <div className="twofor-body49">
         <div className="twofor-text">
