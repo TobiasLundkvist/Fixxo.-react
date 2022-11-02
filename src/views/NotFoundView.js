@@ -1,11 +1,14 @@
 import React from 'react'
 import Navbar from '../section/NavbarSection';
+import errorPage from '../assets/images/404-error-page.jpg'
 
 function NotFoundView() {
   return (
     <>
       <Navbar />
-      <h1 className='d-flex justify-content-center'>404 - Page Not Found</h1>
+      <div className='errorPage container'>
+        <img src={errorPage} alt='errorPage' />
+      </div>
     </>
 
   )

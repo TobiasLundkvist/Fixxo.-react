@@ -12,7 +12,7 @@ function ProductView() {
   return (
     <>
     <Navbar />
-    <ProductGridSection title="Featured Products" items={productContext.all} />
+    <ProductGridSection title="Products" items={productContext.all} />
     <Footer />
     </>
   )

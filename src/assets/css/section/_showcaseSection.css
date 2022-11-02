@@ -40,24 +40,23 @@
 
 
 
-
-@media (min-width: 992px) {
+@media (min-width: 960px) {
     .showcase {
         padding-top: 20px;
     }
         .showcase .container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             max-width: 1680px;
     
         }
             .showcase .container .right-img {
-                display: inline;
+                display: none;
                 margin-right: -120px;
             }
             .showcase .container .left-img {
-                display: inline;
+                display: none;
                 margin-left: -120px;
             }
     
