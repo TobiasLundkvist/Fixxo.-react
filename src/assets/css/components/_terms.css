@@ -11,8 +11,6 @@
 } 
     .terms:hover {
         background-color: var(--color-gray-0);
-
-
     }
 
     .terms .circle {

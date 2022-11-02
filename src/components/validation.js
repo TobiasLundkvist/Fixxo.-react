@@ -21,10 +21,14 @@ export const validate = (e, form = null) => {
 
 
 const validate_name = (value) => {
+    const regex_name = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
+
     if (!value)
         return 'A name is required'
     else if (value.length < 2)
-        return 'Must be a valid name'
+        return 'Your name must be longer then 2 characters'
+    else if (!value.match(regex_name))
+        return 'Your name can not include numbers or special characters'
     else
         return null
 }
@@ -35,7 +39,7 @@ const validate_email = (value) => {
     if (!value)
         return 'An email address is required'
     else if (!regex_email.test(value))
-        return 'Must be a valid email address'
+        return 'You must enter an valid email address, eg. tobias@domain.se'
     else
         return null
 }

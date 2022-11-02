@@ -7,11 +7,12 @@ import SecuredTerms from '../components/SecuredTerms'
 function ShopTerms() {
   return (
     <div className='shop-terms container'>
-        <CustomerTerms />
-        <SecuredTerms />
-        <DeliveryTerms />
-        <ReutersTerms />
+      <CustomerTerms />
+      <SecuredTerms />
+      <DeliveryTerms />
+      <ReutersTerms />
     </div>
+
   )
 }
 

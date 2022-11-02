@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomerService from '../assets/images/customer-service.svg'
 
-function CustomerTerms(img, ) {
+function CustomerTerms() {
   return (
     <div className='terms'>
       <div className='circle'>
