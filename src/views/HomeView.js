@@ -7,6 +7,8 @@ import ShopTerms from '../section/ShopTermsSection';
 import TwoforSection from '../section/TwoforSection';
 import ProductGridSection from '../section/ProductGridSection';
 import {ProductContext } from '../contexts/contexts'
+import NewArrivalsSection from '../section/NewArrivalsSection';
+import SpecialitySection from '../section/SpecialitySection';
 
 
 function HomeView() {
@@ -20,8 +22,10 @@ function HomeView() {
       <Navbar />
       </div>
       <Showcase />
+      <NewArrivalsSection />
       <ProductGridSection title="Featured Products" items={productContext.featuredProducts} />
       <Collabs />
+      <SpecialitySection />
       <TwoforSection items={productContext.twoForProducts}/>
       <ShopTerms />
       <Footer />
