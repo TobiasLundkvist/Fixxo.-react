@@ -9,6 +9,7 @@ import ProductGridSection from '../section/ProductGridSection';
 import {ProductContext } from '../contexts/contexts'
 import NewArrivalsSection from '../section/NewArrivalsSection';
 import SpecialitySection from '../section/SpecialitySection';
+import RankingProducts from '../section/RankingProducts';
 
 
 function HomeView() {
@@ -27,6 +28,7 @@ function HomeView() {
       <Collabs />
       <SpecialitySection />
       <TwoforSection items={productContext.twoForProducts}/>
+      <RankingProducts />
       <ShopTerms />
       <Footer />
     </>
