@@ -41,7 +41,7 @@ function App() {
       setProducts({...products, twoForProducts: await result.json()})
     }
     twoForProducts()
-  }, [setProducts])
+  }, [])
 
 
 

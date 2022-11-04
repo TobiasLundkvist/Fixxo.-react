@@ -5,12 +5,13 @@ import { useParams } from 'react-router-dom';
 
 function ProductDetailsView() {
   
-  const params = useParams()
+  const {id} = useParams()
  
   return (
     <>
         <Navbar />
-          <h1>{params.id}</h1>
+          {/* <h1>{params.articleNumber}</h1> */}
+          <div>{id}</div>
         <Footer />
     </>
 

@@ -24,7 +24,7 @@ function ProductCard({item}) {
                     <button onClick={addToCompare} className='card-icon'><i className="fa-light fa-code-compare"></i></button> 
                     <button onClick={addToCart} className='card-icon'><i className="fa-light fa-bag-shopping"></i></button> 
                 </div>
-                <NavLink to={`/product/${item.id}`} className='btn-red'>
+                <NavLink to={`/product/${item.articleNumber}`} className='btn-red'>
                     <div className="corner-top-left"></div>
                     <div className="corner-bottom-right"></div>
                     QUICK VIEW
