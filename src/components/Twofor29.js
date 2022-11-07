@@ -4,8 +4,6 @@ import ProductCard from './ProductCard'
 
 function Twofor29({items=[]}) {
 
-    const products = useContext(ProductContext) 
-
 
   return (
         <div className='twofor29 container'>

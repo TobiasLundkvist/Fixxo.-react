@@ -11,7 +11,7 @@ import SearchView from './views/SearchView';
 import ShoppingCartView from './views/ShoppingCartView';
 import WishListView from './views/WishListView';
 import NotFoundView from './views/NotFoundView';
-import { ProductContext, FeaturedProductsContext, TwoForProductsContext, ProductsRankContext } from './contexts/contexts'
+import { ProductContext, FeaturedProductsContext, TwoForProductsContext, ProductsRankContext, RelatedProductContext } from './contexts/contexts'
 
 
 
@@ -20,6 +20,7 @@ function App() {
   const [featured, setFeatured] = useState ([])
   const [twoFor, setTwoFor] = useState([])
   const [productsRank, setProductsRank] = useState ([])
+  const [realatedProduct, setRealatedProduct] = useState([])
 
 
   useEffect(() => {
@@ -46,7 +47,13 @@ function App() {
       setProductsRank(await result.json())
     }
     fetchProductsRank()
-  }, [setProducts, setFeatured, setTwoFor, setProductsRank])
+
+    const fetchRealatedProduct = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setRealatedProduct(await result.json())
+    }
+    fetchRealatedProduct()
+  }, [setProducts, setFeatured, setTwoFor, setProductsRank, setRealatedProduct])
 
 
 
@@ -57,6 +64,7 @@ function App() {
       <FeaturedProductsContext.Provider value={featured}>
       <TwoForProductsContext.Provider value={twoFor}>
       <ProductsRankContext.Provider value={productsRank}>
+      <RelatedProductContext.Provider value={realatedProduct}>
         <Routes>
           <Route path='/' element= {<HomeView />} />
           <Route path='/contacts' element= {<ContactsView />} />
@@ -70,6 +78,7 @@ function App() {
 
           <Route path='*' element= {<NotFoundView />} />
         </Routes>
+      </RelatedProductContext.Provider>
       </ProductsRankContext.Provider>
       </TwoForProductsContext.Provider>
       </FeaturedProductsContext.Provider>

@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import Navbar from '../section/NavbarSection';
 import Footer from '../section/FooterSection';
 import { useParams } from 'react-router-dom';
 import ProductDetails from '../section/ProductDetails';
+import { RelatedProductContext } from '../contexts/contexts'
 
 function ProductDetailsView() {
-  
+
+  const realatedProduct = useContext(RelatedProductContext)
+
   const {id} = useParams()
   const [product, setProduct] = useState({})
 
@@ -21,7 +24,7 @@ function ProductDetailsView() {
   return (
     <>
       <Navbar />
-      <ProductDetails product={product}/>
+      <ProductDetails product={product} items={realatedProduct}/>
       <Footer />
     </>
 
