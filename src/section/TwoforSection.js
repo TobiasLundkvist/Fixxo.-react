@@ -1,17 +1,17 @@
 import React, { useContext } from 'react'
 import Twofor29 from '../components/Twofor29'
 import Twofor49 from '../components/Twofor49'
-import {ProductContext } from '../contexts/contexts'
+import {TwoForProductsContext} from '../contexts/contexts'
 
 
 function TwoforSection() {
 
-  const productContext = useContext(ProductContext) 
+  const twoFor = useContext(TwoForProductsContext)
 
   return (
     <> 
-      <Twofor29 items={productContext.twoForProducts} />
-      <Twofor49 items={productContext.twoForProducts} />
+      <Twofor29 items={twoFor} />
+      <Twofor49 items={twoFor} />
     </>
   )
 }

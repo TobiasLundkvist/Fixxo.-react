@@ -41,7 +41,7 @@ function ProductCard({item}) {
                 <i className="rating fa-solid fa-star"></i>
                 <i className="rating fa-solid fa-star"></i>
             </div>
-            <p className="price"><span></span>{item.price}</p>
+            <p className="price"><span></span>${item.price}</p>
         </div>
     </div>
   )

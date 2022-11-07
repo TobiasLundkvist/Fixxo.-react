@@ -5,8 +5,6 @@ import {ProductContext } from '../contexts/contexts'
 
 function ProductGridSection({title, items=[]}) {
 
-  const products = useContext(ProductContext) 
-
   return (
     <section>
       <div className="product-grid">

@@ -20,6 +20,8 @@
     width: 100%;
 }
     .the-product .product-card {
+        display: flex;
+        justify-content: center;
         position: relative;
         height: 210px;
         background-color: var(--color-gray-0);

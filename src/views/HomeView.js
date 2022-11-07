@@ -6,7 +6,7 @@ import Footer from '../section/FooterSection';
 import ShopTerms from '../section/ShopTermsSection';
 import TwoforSection from '../section/TwoforSection';
 import ProductGridSection from '../section/ProductGridSection';
-import {ProductContext } from '../contexts/contexts'
+import { FeaturedProductsContext, TwoForProductsContext, ProductsRankContext } from '../contexts/contexts'
 import NewArrivalsSection from '../section/NewArrivalsSection';
 import SpecialitySection from '../section/SpecialitySection';
 import RankingProducts from '../section/RankingProducts';
@@ -15,7 +15,9 @@ import RankingProducts from '../section/RankingProducts';
 function HomeView() {
   window.top.document.title = 'Fixxo.'
   
-  const productContext = useContext(ProductContext) 
+  const products = useContext(FeaturedProductsContext);
+  const twoFor = useContext(TwoForProductsContext)
+  const productsRank = useContext(ProductsRankContext)
 
   return (
     <>
@@ -24,11 +26,11 @@ function HomeView() {
       </div>
       <Showcase />
       <NewArrivalsSection />
-      <ProductGridSection title="Featured Products" items={productContext.featuredProducts} />
+      <ProductGridSection title="Featured Products" items={products} />
       <Collabs />
       <SpecialitySection />
-      <TwoforSection items={productContext.twoForProducts}/>
-      <RankingProducts />
+      <TwoforSection items={twoFor} />
+      <RankingProducts items={productsRank} />
       <ShopTerms />
       <Footer />
     </>
