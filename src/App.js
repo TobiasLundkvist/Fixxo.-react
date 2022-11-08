@@ -12,6 +12,7 @@ import ShoppingCartView from './views/ShoppingCartView';
 import WishListView from './views/WishListView';
 import NotFoundView from './views/NotFoundView';
 import { ProductContext, FeaturedProductsContext, TwoForProductsContext, ProductsRankContext, RelatedProductContext } from './contexts/contexts'
+import { ShoppingCartProvider } from './contexts/shoppingCartContext'
 
 
 
@@ -60,6 +61,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ShoppingCartProvider>
       <ProductContext.Provider value={products}>
       <FeaturedProductsContext.Provider value={featured}>
       <TwoForProductsContext.Provider value={twoFor}>
@@ -83,6 +85,7 @@ function App() {
       </TwoForProductsContext.Provider>
       </FeaturedProductsContext.Provider>
       </ProductContext.Provider>
+      </ShoppingCartProvider>
     </BrowserRouter>
   );
 }

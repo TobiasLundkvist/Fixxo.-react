@@ -13,6 +13,7 @@
     transition: 0.3s ease-in-out;
     box-shadow: 0 0 6px 4px var(--color-dark-shadow);
     transition: 0.3s ease-in-out;
+    border: none;
 }
     .whiteCircle:hover {
         background-color: var(--color-gray-1);
@@ -21,7 +22,7 @@
     .whiteCircle .active {
         background-color: var(--color-gray-1);
     }
-        .whiteCircle #quantity .badge {
+        .whiteCircle .badge {
             background-color: var(--color-red);
             position: absolute;
             top: -10px;
@@ -29,7 +30,7 @@
             font-weight: var(--font-weight-medium);
             transition: 0.3s ease-in-out;
         }
-            .whiteCircle:hover #quantity .badge {
+            .whiteCircle:hover .badge {
                 background-color: var(--color-red-hover)
             }
 
