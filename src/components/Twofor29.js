@@ -1,5 +1,3 @@
-import React, { useContext, useState } from 'react'
-import {ProductContext } from '../contexts/contexts'
 import ProductCard from './ProductCard'
 
 function Twofor29({items=[]}) {

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { validate } from '../components/Validering'
 
 function ContactForm() {
     const [contactForm, setContactForm] = useState({
