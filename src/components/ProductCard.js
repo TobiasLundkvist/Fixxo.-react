@@ -1,17 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { useShoppingCart } from '../contexts/shoppingCartContext'
+import { currencyFormatter } from '../utilities/currencyFormat'
 
 function ProductCard({item}) {
-    
-    const addToWishList = (e) => {
-        console.log("added to wish list")
-    }
-    const addToCompare = (e) => {
-        console.log("added to compare")
-    }
-    const addToCart = (e) => {
-        console.log("added to shoppingcart")
-    }
+    const { incrementQuantity } = useShoppingCart()
 
 
   return (
@@ -20,9 +13,9 @@ function ProductCard({item}) {
         <img src={item.imageName} alt={item.name}/>
             <div className="card-img">
                 <div className="card-menu">
-                    <button onClick={addToWishList} className='card-icon'><i className="fa-light fa-heart"></i></button> 
-                    <button onClick={addToCompare} className='card-icon'><i className="fa-light fa-code-compare"></i></button> 
-                    <button onClick={addToCart} className='card-icon'><i className="fa-light fa-bag-shopping"></i></button> 
+                    <button className='card-icon'><i className="fa-light fa-heart"></i></button> 
+                    <button className='card-icon'><i className="fa-light fa-code-compare"></i></button> 
+                    <button onClick={() => incrementQuantity({articleNumber: item.articleNumber, product: item})} className='card-icon'><i className="fa-light fa-bag-shopping"></i></button> 
                 </div>
                 <NavLink to={`/product/${item.articleNumber}`} className='btn-red'>
                     <div className="corner-top-left"></div>
@@ -41,7 +34,7 @@ function ProductCard({item}) {
                 <i className="rating fa-solid fa-star"></i>
                 <i className="rating fa-solid fa-star"></i>
             </div>
-            <p className="price"><span></span>${item.price}</p>
+            <p className="price">{currencyFormatter(item.price)}</p>
         </div>
     </div>
   )

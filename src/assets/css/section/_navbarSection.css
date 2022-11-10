@@ -52,6 +52,7 @@
         .navbar .container .menulinks {
             display: flex;
             grid-area: menulinks;
+            justify-content: center;
         }
         
         .navbar .container .navbarShop {
@@ -86,6 +87,7 @@
         .navbar .container .menulinks {
             display: flex;
             grid-area: menulinks;
+            justify-content: center;
         }
         
         .navbar .container .navbarShop {

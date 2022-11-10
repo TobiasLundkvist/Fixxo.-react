@@ -1,10 +1,11 @@
 import React from 'react'
-// import { useShoppingCart } from '../contexts/shoppingCartContext'
-// import ShoppingCartItem from './ShoppingCartItem'
+import { useShoppingCart } from '../contexts/shoppingCartContext'
+import ShoppingCartItem from './ShoppingCartItem'
 
 
 function ShoppingCart() {
-  // const { cartItems } = useShoppingCart
+  
+  const { cartItems } = useShoppingCart()
   
   return (
     <div className="shoppingCart offcanvas offcanvas-end" tabIndex="-1" id="shoppingCart" aria-labelledby="shoppingCartLabel">
@@ -14,8 +15,7 @@ function ShoppingCart() {
       </div>
       <div className="offcanvas-body">
           {
-            // <ShoppingCartItem />
-            // cartItems.map(item => (<ShoppingCartItem key={item.articleNumber} item={item} />)) 
+            cartItems.map(item => (<ShoppingCartItem key={item.articleNumber} item={item} />)) 
           }
       </div>
     </div>

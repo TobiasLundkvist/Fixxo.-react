@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import BreadcrumbSection from '../section/BreadcrumbSection'
 import ProductCard from '../components/ProductCard'
 
@@ -21,11 +21,11 @@ function ProductDetails({product, items=[]}) {
       <BreadcrumbSection link="/" currentPage="| Product Signal" />
       <div className='detailsBody'>
         <div>
-          <img src={product.imageName} />
+          <img src={product.imageName} alt={product.name} />
           <div className='smallImg'>
-            <img src={product.imageName} />
-            <img src={product.imageName} />
-            <img src={product.imageName} />
+            <img src={product.imageName} alt={product.name} />
+            <img src={product.imageName} alt={product.name} />
+            <img src={product.imageName} alt={product.name} />
           </div>
         </div>
         <div className='details'>
