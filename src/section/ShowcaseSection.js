@@ -8,8 +8,8 @@ function Showcase() {
         <div className='container'>
             <img className="left-img" src={LeftImage} alt="Showcase Girl" />
             <div className= 'showcase-text'>
-                <h1><span>SALE UP</span>To 50% Off</h1>
-                <p>Online shopping free home delivery over $100</p>             
+                <h1><span data-testid="showcaseTest">SALE UP</span>To 50% Off</h1>
+                <p data-testid="test">Online shopping free home delivery over $100</p>             
                 <button className='btn-red'>
                 <div className='corner-top-left'></div>   
                 <div className='corner-bottom-right'></div>SHOP NOW

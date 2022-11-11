@@ -5,6 +5,7 @@ import { currencyFormatter } from '../utilities/currencyFormat'
 function ShoppingCartItem({item}) {
   const {incrementQuantity, decrementQuantity, removeItem} = useShoppingCart()
 
+  console.log(item.quantity)
 
   return (
     <div className='shoppingcart-item'>
