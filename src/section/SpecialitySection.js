@@ -10,21 +10,21 @@ function SpecialitySection() {
                     <div className="speciality-text">
                         <div className="speciality-info">
                             <h3>Track Your Order</h3>
-                            <a href="#">Get Started {'>'}</a>
+                            <a href='https://google.se' target="_blank" rel="noreferrer">Get Started {'>'}</a>
                         </div>
                         <div></div>
                     </div>
                     <div className="speciality-text">
                         <div className="speciality-info">
                             <h3>Make a Return</h3>
-                            <a href="#">Get Started {'>'}</a>
+                            <a href='https://google.se' target="_blank" rel="noreferrer">Get Started {'>'}</a>
                         </div>
                         <div></div>
                     </div>
                     <div className="speciality-text">
                         <div className="speciality-info">
                             <h3>Request a Price Adjustment</h3>
-                            <a href="#">Get Started {'>'}</a>
+                            <a href='https://google.se' target="_blank" rel="noreferrer">Get Started {'>'}</a>
                         </div>
                         <div></div>
                     </div>
